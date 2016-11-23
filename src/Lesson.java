@@ -5,9 +5,9 @@ import java.util.Date;
  */
 public class Lesson {
     String name;
-    Date d;
-    public Lesson(String n, Date d){
+    Date date;
+    Lesson(String n, Date d){
         this.name=n;
-        this.d=d;
+        this.date=d;
     }
 }

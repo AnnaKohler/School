@@ -3,17 +3,18 @@
  */
 public class Teacher extends Man{
     Lesson Lessons[];
-    public int lcnt=0;
+
+    public int lessonCnt=0;
     @Override
     public String toString(){
         return "teacher "+super.toString();
     }
-    public void addMark(Schooler s, Lesson l, int val){
-        if(s.mcnt==5){
-            System.out.println("Уже есть 5 оценок");
+    public void addMarkToStudent(Schooler s, Lesson l, int val){
+        if(s.markCnt==s.MARK_CNT){
+            System.out.println("Уже есть"+s.MARK_CNT+" оценок");
             return;
         }
-        s.Marks[s.mcnt]=new Mark(l, val);
-        s.mcnt+=1;
+        s.Marks[s.markCnt]=new Mark(l, val);
+        s.markCnt+=1;
     }
 }
