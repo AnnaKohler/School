@@ -10,4 +10,8 @@ public class Lesson {
         this.name=n;
         this.date=d;
     }
+    Lesson(String n){
+        this.name=n;
+        this.date=new Date();
+    }
 }

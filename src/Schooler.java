@@ -23,6 +23,26 @@ public class Schooler extends Man {
         this.Marks[this.markCnt]=new Mark(lessonName, val);
         this.markCnt+=1;
     }
+    public float getAverageMark(){
+        int cnt=0;
+        int sum=0;
+        for(Mark m:Marks){
+            cnt+=1;
+            sum+=m.value;
+        }
+        return (float)sum/cnt;
+    }
+    public float getAverageMarkByLesson(String lName){
+        int cnt=0;
+        int sum=0;
+        for(Mark m:Marks){
+            if(m.lessonName==lName){
+                cnt+=1;
+                sum+=m.value;
+            }
+        }
+        return (float)sum/cnt;
+    }
 
 
 }
